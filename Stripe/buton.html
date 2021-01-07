@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <button id="customButton">Purchase</button>
+    
+    <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+      image: 'https://d1wqzb5bdbcre6.cloudfront.net/d5d48f7ef87c0d12bdc9f056276f5f04efa46b51/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f666c5f6c6976655f49415a4239727557686e36334f7159683853484664495067',
+      locale: 'es_CO',
+      token: function(token) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+      }
+    });
+    
+    document.getElementById('customButton').addEventListener('click', function(e) {
+      // Open Checkout with further options:
+      handler.open({
+        name: 'Woocommerce Administrado',
+        description: 'Promo 2021-1',
+        zipCode: true,
+        amount: 3000,
+        billingAddress: true,
+        panelLabel: 'Pay Now'
+      });
+      e.preventDefault();
+    });
+    
+    // Close Checkout on page navigation:
+    window.addEventListener('popstate', function() {
+      handler.close();
+    });
+    </script>
+
+
+
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-price_1I74KOFicUF57Q481vELHvJ4"
+  role="link"
+  type="button"
+>
+  Checkout
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_QvQlraHc9ZtadxFzKYyB5mKP00Lu5sj4bb');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1I74KOFicUF57Q481vELHvJ4');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1I74KOFicUF57Q481vELHvJ4', quantity: 1}],
+      mode: 'subscription',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://sjsocialmedia.com/success',
+      cancelUrl: 'https://sjsocialmedia.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
+
+
+</body>
+</html>
