@@ -80,3 +80,24 @@ Lo que quiere decir que con las funciones declarativas, podemos mandar llamar la
 Coerción es la forma en la que podemos cambiar un tipo de valor a otro, existen dos tipos de coerción:
 Coerción implícita = es cuando el lenguaje nos ayuda a cambiar el tipo de valor.
 Coerción explicita = es cuando obligamos a que cambie el tipo de valor.
+
+
+# Valores: Truthy y Falsy
+Ejemplos en los que Boolean devuelve Falso:
+```
+Boolean(0); //false
+Boolean(null); //false
+Boolean(NaN); //false
+Boolean(undefined); //false
+Boolean(false); //false
+Boolean(""); //false
+```
+
+Ejemplos en los que Boolean devuelve verdadero:
+```
+Boolean(1); //true para 1 o cualquier número diferente de cero (0)
+Boolean("a"); //true para cualquier caracter o espacio en blanco en el string
+Boolean([]); //true aunque el array esté vacío
+Boolean({}); //true aunque el objeto esté vacío
+Boolean(function(){}); //Cualquier función es verdadera también
+```
