@@ -71,3 +71,6 @@ A las funciones declarativas se les aplica hoisting, y a la expresión de funci�
 Lo que quiere decir que con las funciones declarativas, podemos mandar llamar la función antes de que ésta sea declarada, y con la expresión de función, no, tendríamos que declararla primero, y después mandarla llamar.
 
 # Scope
+
+
+# Hoisting
