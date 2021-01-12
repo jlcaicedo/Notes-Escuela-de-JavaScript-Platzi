@@ -39,3 +39,9 @@ Todas las funciones nuevas que salen de Javascript no dañarán el trabajo ya he
 4. Puedes construir  **aplicaciones de escritorio**  con JavaScript, usando un framework llamado Electron, pueden correr en Mac o Windows.
     
 5. También puedes trabajar en la parte del  **Back-end**  o **IOT** (Internet Od Things) es un concepto que se refiere a una interconexion digital de objetos cotidianos con Internet. Esto con un Framework llamado NodeJS, el cual es un entorno de ejecución de JavaScript que corre directamente en el Back-end.
+
+
+# Funciones
+Existen dos tipos de funciones:
+## Funciones Dleclarativas
+## Funciones Expresivas
