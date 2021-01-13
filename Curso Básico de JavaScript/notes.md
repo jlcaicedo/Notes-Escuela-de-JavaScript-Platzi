@@ -131,3 +131,6 @@ Simbolo	    Descripcion
 !           NOT     niega un valor
 &&	        AND     Y
 ||	        OR      O
+
+# Condicionales
+## If
