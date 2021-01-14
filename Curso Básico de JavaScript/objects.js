@@ -18,6 +18,7 @@ miAuto.detallesDelAuto(); // Esta es la manera de llamar el metodo, ya que como 
 
 
 // Función constructora 
+// Esta genera un template de un objeto con los parametros que necesitamos usar
 
 function auto(marca, modelo, annio) {  // Creas una función con los parametros que va a recibir, 
     this.marca = marca;   // Utilizamos el "this" para asignar valores a las propiedades del objeto 
@@ -25,4 +26,4 @@ function auto(marca, modelo, annio) {  // Creas una función con los parametros 
     this.annio = annio;
 }
 
-var newAuto = new auto("Tesla", "Model 3", 2020);
+var newAuto = new auto("Tesla", "Model 3", 2020); //new genera una nueva instancia de nuestra funcion constructora.
