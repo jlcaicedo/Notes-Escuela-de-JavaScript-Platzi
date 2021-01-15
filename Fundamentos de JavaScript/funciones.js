@@ -16,3 +16,17 @@ imprimirEdad(nombre, edad)
 imprimirEdad('Andres', 26)
 imprimirEdad('Stephanie', 29)
 imprimirEdad('Luis', 64)
+
+
+
+// El alcance de las funciones
+var nombre = 'Jose'
+
+function imprimirNombreEnMayusculas(nombre) {
+  nombre = nombre.toUpperCase()
+  console.log(nombre)
+}
+
+imprimirNombreEnMayusculas(nombre)
+
+// toda variable que no este definida dentro de una funcion va estar definida dentro del alcance global y vamos a poder acceder  a ella a traves del objeto global
