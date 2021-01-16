@@ -62,3 +62,24 @@ function imprimirNombreYEdad({ nombre, edad }) {
 }
 imprimirNombreYEdad(jose)
 imprimirNombreYEdad({nombre: 'Stephanie', edad: 28})
+
+// Parámetros como referencia o como valor
+
+function cumpleanos(persona) {
+  persona.edad += 1
+  console.log(jose)
+} 
+
+// Con el anterior ejemplo demostramos que JAvascript los objertos se comportan distinto
+// 
+
+function cumpleannos(persona) {
+  return {
+    ...persona, // desglosamos a la persona dentro de este nuevo objeto
+    edad: persona.edad + 1
+  }
+}
+
+var joseMasViejo = cumpleannos(jose)
+
+// tenemos que tener en cuenta como se manejan los objetos en JavaScript
