@@ -16,3 +16,5 @@ Variable global: Variable que no esta definida dentro de una funcion sino por fu
 Al hacer referencia directa a una variable global dentro de una funcion, podermos modificar su valor, esto se le denomina sideEfect, y esto lo vamos a querer evitar.
 
 Para acceder a la variable global, hacemos referencia al objeto global, en este caso por estar en el browser accedemos con window.nombre
+
+# Objetos
