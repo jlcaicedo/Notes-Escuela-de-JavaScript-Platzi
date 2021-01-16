@@ -20,7 +20,7 @@ imprimirNombreEnMayusculas(nombre)
 // ya que por cada nombre que quisieramos adicionar tenfriamos que adicionar una nueva variable
 
 
-var jose {  // Se usan llaves para que nos delimite un objeto
+var jose = {  // Se usan llaves para que nos delimite un objeto
   nombre: 'Jose',
   apellido: 'Caicedo',
   edad: 37,
@@ -34,3 +34,31 @@ function imprimirNombreEnMayusculas(persona) { // entre los parentesis le pasamo
 imprimirNombreEnMayusculas(jose) // en este caso solo le pasamos el nombre ya que la aplicacion sabe cual es el atributo que debe obtener
 
 
+// Desestructurar objetos
+
+var jose = {  
+  nombre: 'Jose',
+  apellido: 'Caicedo',
+  edad: 37,
+}
+
+function imprimirNombreEnMayusculas(persona) { 
+  var { nombre } = persona
+  console.log(nombre.toUpperCase())
+}
+imprimirNombreEnMayusculas(jose)
+
+
+
+// Ejercicio
+var jose = {  
+  nombre: 'Jose',
+  apellido: 'Caicedo',
+  edad: 37,
+}
+
+function imprimirNombreYEdad({ nombre, edad }) { 
+  console.log(`Hola, me llamo ${nombre} y tengo ${edad} annos`)
+}
+imprimirNombreYEdad(jose)
+imprimirNombreYEdad({nombre: 'Stephanie', edad: 28})
