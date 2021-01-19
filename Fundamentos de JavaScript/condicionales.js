@@ -141,6 +141,4 @@ function permitirAcceso(persona) {
 
 
 // Ejercicio de pasar la anterior negacion como arrow funtion
-const permitirAcceso = (persona) => (!esMayorDeEdad(persona)) { // el simbolo de exclamacion (!) Niega lo que lo acompana
-    console.log('ACCESO DENEGADO')
-}
+const permitirAcceso = (persona) => (!esMayorDeEdad(persona)) ? 'ACCESO DENEGADO' : ""
