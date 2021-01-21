@@ -5,7 +5,7 @@ var jose = {
     peso: 75
   }
   
-  console.log(`Al inicio del año ${sacha.nombre} pesa ${sacha.peso}kg`)
+  console.log(`Al inicio del año ${jose.nombre} pesa ${jose.peso}kg`)
   
   // function aumentarDePeso (persona) {
   //   return persona.peso += 200
@@ -18,17 +18,17 @@ var jose = {
   const comeMucho = () => Math.random() < 0.3
   const realizaDeporte = () => Math.random() < 0.4
   
-  const META = sacha.peso - 3
+  const META = jose.peso - 3
   var dias = 0
   
-  while (sacha.peso > META) {
+  while (jose.peso > META) {
     if (comeMucho()) {
-      aumentarDePeso(sacha)
+      aumentarDePeso(jose)
     }
     if (realizaDeporte()) {
-      adelgazar(sacha)
+      adelgazar(jose)
     }
     dias += 1
   }
   
-  console.log(`Pasaron ${dias} días hasta que ${sacha.nombre} adelgazó 3kg`)
+  console.log(`Pasaron ${dias} días hasta que ${jose.nombre} adelgazó 3kg`)
